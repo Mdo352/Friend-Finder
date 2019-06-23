@@ -1,0 +1,24 @@
+{
+  "name": "Friend-Finder",
+  "version": "1.0.0",
+  "description": "Compatibility Friend Finder Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mdo352/Friend-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mdo352/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/Mdo352/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
