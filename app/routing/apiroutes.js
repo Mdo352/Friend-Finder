@@ -6,8 +6,14 @@ module.exports = function(app) {
         res.json(friendList);
     });
 
-    app.post("api/friends", function(req, res){
-        friendList.push(req.body);
+    app.post("/api/friends", function(req, res){
+        var newFreind = req.body;
+        newFreind.routeName = newFreind.name.replace(/\s+/g, "").toLowerCase();
+
+        console.log(newFreind);
+        res.json(newFreind);
+        friendList.push(newFreind);
+
     });
 
 };

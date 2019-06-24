@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href=""> -->
+
+        <script src="https://code.jquery.com/jquery.js"></script>
 
         <title>Friend Finder | Survey</title>
     </head>
@@ -163,6 +164,36 @@
         </div>
 
         
-        <script src="" async defer></script>
+        <script>
+            
+            // document.querySelector("#submit").onclick = function(){
+            $("#submit").on ('click', function(event) {
+
+                event.preventDefault();
+                var newFriend = {
+                    name: document.querySelector("#name").value.trim(),
+                    photo: document.querySelector("#picLink").value.trim(),
+                    scores: [
+                        document.querySelector("#q-1").value,
+                        document.querySelector("#q-2").value,
+                        document.querySelector("#q-3").value,
+                        document.querySelector("#q-4").value,
+                        document.querySelector("#q-5").value,
+                        document.querySelector("#q-6").value,
+                        document.querySelector("#q-7").value,
+                        document.querySelector("#q-8").value,
+                        document.querySelector("#q-9").value,
+                        document.querySelector("#q-10").value
+                    ]
+                };
+                console.log(newFriend);
+
+                $.post("/api/friends", newFriend)
+                    .then(function(data){
+                        console.log("adding to freind list");
+                    });
+            });
+
+        </script>
     </body>
 </html>
