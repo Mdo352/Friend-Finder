@@ -166,9 +166,8 @@
         
         <script>
             
-            // document.querySelector("#submit").onclick = function(){
-            $("#submit").on ('click', function(event) {
-
+            document.querySelector("#submit").onclick = function() {
+            // $("#submit").on ('click', function(event) {
                 event.preventDefault();
                 var newFriend = {
                     name: document.querySelector("#name").value.trim(),
@@ -189,10 +188,22 @@
                 console.log(newFriend);
 
                 $.post("/api/friends", newFriend)
-                    .then(function(data){
-                        console.log("adding to freind list");
-                    });
-            });
+                .then(function(data){
+                });
+
+                document.querySelector("#name").value("");
+                document.querySelector("#picLink").value("");
+                document.querySelector("#q-1").value("");
+                document.querySelector("#q-2").value("");
+                document.querySelector("#q-3").value("");
+                document.querySelector("#q-4").value("");
+                document.querySelector("#q-5").value("");
+                document.querySelector("#q-6").value("");
+                document.querySelector("#q-7").value("");
+                document.querySelector("#q-8").value("");
+                document.querySelector("#q-9").value("");
+                document.querySelector("#q-10").value("");
+            };
 
         </script>
     </body>
