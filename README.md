@@ -2,8 +2,7 @@
 Compatibility Friend Finder Application  
 Complete the 10 survey questions to find out who you are matched with based on you survey responses. Your responses are compared with every member of our database.
 
-The deployed version of the application is here:  
-[FriendFinder]()
+The deployed version of the application is here: [FriendFinder](https://fierce-shelf-68624.herokuapp.com/) https://fierce-shelf-68624.herokuapp.com/
 
 ## Run Locally
 1. Clone this repository: https://github.com/Mdo352/Friend-Finder.git  
