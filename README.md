@@ -1,6 +1,6 @@
 # Friend-Finder
-Compatibility Friend Finder Application
-Complete the 10 survey questions to find out who you are matched with based on you survey responses. Your responses are compared with all the members of our database.
+Compatibility Friend Finder Application  
+Complete the 10 survey questions to find out who you are matched with based on you survey responses. Your responses are compared with every member of our database.
 
 The deployed version of the application is here:  
 [FriendFinder]()
