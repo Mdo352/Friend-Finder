@@ -27,7 +27,7 @@
                 </div>
             </form>
 
-            <form>
+            <form id="questions">
                 <label class="my-1 mr-2 font-weight-bold" for="q-1">Question 1</label>
                 <br>
                 Your mind is always buzzing with unexplored ideas and plans.
@@ -194,15 +194,10 @@
             function resetForm() {
                 document.querySelector("#name").value = "";
                 document.querySelector("#picLink").value = "";
-                for (i = 1; i <= newFriend.scores.length; i++){
-
-                    var dropDown = document.querySelector("#q-"+ i).value;  
-                    dropDown.selectedIndex = 0;  
-                };
+                document.getElementById('questions').reset();
             };  
             
             document.querySelector("#submit").onclick = function() {
-            // $("#submit").on ('click', function(event) {
                 event.preventDefault();
                 var newFriend = {
                     name: document.querySelector("#name").value.trim(),
@@ -230,9 +225,9 @@
                     document.querySelector("#bestieImg").setAttribute("src", data.photo);
 
                     $("#bestieResults").modal("toggle");
+                    resetForm();
                 });
                 
-                // document.location.reload();
             };
 
         </script>
