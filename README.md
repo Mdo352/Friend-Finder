@@ -2,13 +2,13 @@
 Compatibility Friend Finder Application
 Complete the 10 survey questions to find out who you are matched with based on you survey responses. Your responses are compared with all the members of our database.
 
-The deployed version of the application is here:
+The deployed version of the application is here:  
 [FriendFinder]()
 
 ## Run Locally
-Clone this repository: https://github.com/Mdo352/Friend-Finder.git
-Install the Node dependencies: _node install_
-Run the server: _node server.js_
+Clone this repository: https://github.com/Mdo352/Friend-Finder.git  
+Install the Node dependencies: _node install_  
+Run the server: _node server.js_  
 Open your browser and visit: _localhost:1738_
 
 ## Built With
