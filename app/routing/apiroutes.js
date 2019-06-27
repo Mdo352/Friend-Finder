@@ -20,7 +20,7 @@ module.exports = function(app) {
         var totalDiff = 0;
 
         for (i = 0; i < friendList.length; i++){
-            console.log(friendList[i]);
+            // console.log(friendList[i]);
             totalDiff = 0;
             for(j = 0; j < friendList[i].scores[j]; j++){
                 totalDiff += Math.abs(parseInt(newScores[j]) - parseInt(friendList[i].scores[j]) );
