@@ -6,10 +6,10 @@ The deployed version of the application is here:
 [FriendFinder]()
 
 ## Run Locally
-Clone this repository: https://github.com/Mdo352/Friend-Finder.git  
-Install the Node dependencies: _node install_  
-Run the server: _node server.js_  
-Open your browser and visit: _localhost:1738_
+1. Clone this repository: https://github.com/Mdo352/Friend-Finder.git  
+1. Install the Node dependencies: _node install_  
+1. Run the server: _node server.js_  
+1. Open your browser and visit: _localhost:1738_
 
 ## Built With
 - jQuery
