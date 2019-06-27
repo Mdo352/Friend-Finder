@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <title>Friend Finder | Survey</title>
     </head>
@@ -162,9 +165,18 @@
             <br>
             <p> <a href="/api/friends">API Friend List</a> | <a href="https://github.com/Mdo352/Friend-Finder">GitHub Repo </a> </p>
         </div>
-
+        
         
         <script>
+            function resetForm() {
+                document.querySelector("#name").value = "";
+                document.querySelector("#picLink").value = "";
+                for (i = 1; i <= newFriend.scores.length; i++){
+
+                    var dropDown = document.querySelector("#q-"+ i).value;  
+                    dropDown.selectedIndex = 0;  
+                };
+            };  
             
             document.querySelector("#submit").onclick = function() {
             // $("#submit").on ('click', function(event) {
@@ -190,21 +202,11 @@
                 $.post("/api/friends", newFriend)
                 .then(function(data){
                 });
-
-                document.querySelector("#name").value("");
-                document.querySelector("#picLink").value("");
-                document.querySelector("#q-1").value("");
-                document.querySelector("#q-2").value("");
-                document.querySelector("#q-3").value("");
-                document.querySelector("#q-4").value("");
-                document.querySelector("#q-5").value("");
-                document.querySelector("#q-6").value("");
-                document.querySelector("#q-7").value("");
-                document.querySelector("#q-8").value("");
-                document.querySelector("#q-9").value("");
-                document.querySelector("#q-10").value("");
+                
+                document.location.reload();
             };
 
         </script>
+
     </body>
 </html>
